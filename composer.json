@@ -1,5 +1,5 @@
 {
-  "name": "rudymas/emv_controller",
+  "name": "rudymas/emvc_controller",
   "description": "PHP class Emvc_Controller for the EasyMVC Framework",
   "version": "1.4.0",
   "type": "library",
