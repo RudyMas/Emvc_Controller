@@ -1,6 +1,6 @@
 {
   "name": "easymvc/controller",
-  "description": "PHP class Emvc_Controller for the EasyMVC Framework",
+  "description": "PHP Class Controller for the EasyMVC Framework",
   "version": "1.4.2",
   "type": "library",
   "license": "GPL-3.0",

@@ -1,6 +1,6 @@
 # Class Controller for the EasyMVC Framework
 
-This is the Emvc_Controller class which is used by EasyMVC.
+This is the Class Controller which is used by EasyMVC.
 
 ## Installation
 Install the package using composer.
