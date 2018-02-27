@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f3a591f02864745cd59691b7195090a",
+    "content-hash": "03babede2591ab9bb612fe962e290454",
     "packages": [
         {
             "name": "rudymas/filemanager",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RudyMas/filemanager.git",
-                "reference": "5de97d2f18e45a360fd5fb69c3df7cc3206a5626"
+                "reference": "3825d70d4bdf645eb2bc009070e433078918bd2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RudyMas/filemanager/zipball/5de97d2f18e45a360fd5fb69c3df7cc3206a5626",
-                "reference": "5de97d2f18e45a360fd5fb69c3df7cc3206a5626",
+                "url": "https://api.github.com/repos/RudyMas/filemanager/zipball/3825d70d4bdf645eb2bc009070e433078918bd2a",
+                "reference": "3825d70d4bdf645eb2bc009070e433078918bd2a",
                 "shasum": ""
             },
             "require": {
@@ -40,11 +40,47 @@
                 }
             ],
             "description": "Working with files on a server",
-            "time": "2016-11-09T12:50:54+00:00"
+            "time": "2016-10-29T13:11:16+00:00"
+        },
+        {
+            "name": "rudymas/html5",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RudyMas/html5.git",
+                "reference": "e7273ba1a95ff2a73631c1e769d474fe05362f93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RudyMas/html5/zipball/e7273ba1a95ff2a73631c1e769d474fe05362f93",
+                "reference": "e7273ba1a95ff2a73631c1e769d474fe05362f93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.4.0 || >= 7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RudyMas\\HTML5\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Rudy Mas",
+                    "email": "rudy.mas@rudymas.be"
+                }
+            ],
+            "description": "PHP class to create HTML5 tags",
+            "time": "2016-10-27T10:00:59+00:00"
         },
         {
             "name": "rudymas/xml_json",
-            "version": "dev-master",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RudyMas/xml_json.git",
@@ -81,7 +117,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "dev-master",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -140,16 +176,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "dev-master",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9c8c0a4b2a72a8147ea34833cf4132ef408755ba"
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9c8c0a4b2a72a8147ea34833cf4132ef408755ba",
-                "reference": "9c8c0a4b2a72a8147ea34833cf4132ef408755ba",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +200,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -202,12 +238,12 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T17:50:14+00:00"
+            "time": "2017-09-27T18:10:31+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
