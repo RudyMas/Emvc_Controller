@@ -1,6 +1,6 @@
 <?php
 
-namespace RudyMas\Emvc_Controller;
+namespace EasyMVC\Controller;
 
 use Exception;
 use RudyMas\XML_JSON\XML_JSON;
@@ -16,7 +16,7 @@ use Twig_Loader_Filesystem;
  * @version     1.4.2
  * @package     Library
  */
-class Emvc_Controller
+class Controller
 {
     /**
      * @param null|string $page
@@ -41,7 +41,7 @@ class Emvc_Controller
                 $this->renderPHP($page, $data);
                 exit;
             case 'TWIG':
-                $this->renderTWIG($page, $data, false); //TODO: Set debug to tre while coding
+                $this->renderTWIG($page, $data, false); //TODO: Set debug to true while coding
                 exit;
             default:
                 throw new Exception("<p><b>Exception:</b> Wrong page type ({$type}) given.</p>", 501);
@@ -206,4 +206,4 @@ class Emvc_Controller
     }
 }
 
-/** End of File: Emvc_Controller.php **/
+/** End of File: Controller.php **/
