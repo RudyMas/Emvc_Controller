@@ -13,7 +13,7 @@ use Twig_Loader_Filesystem;
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
  * @copyright   2016-2018, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.4.3
+ * @version     1.5.0
  * @package     EasyMVC\Controller
  */
 class Controller
@@ -67,7 +67,7 @@ class Controller
      */
     private function renderHTML(string $page): void
     {
-        $display = $_SERVER['DOCUMENT_ROOT'] . BASE_URL . '/src/views/' . $page;
+        $display = $_SERVER['DOCUMENT_ROOT'] . BASE_URL . '/src/Views/' . $page;
         if (file_exists($display)) {
             readfile($display);
         } else {
@@ -169,7 +169,7 @@ class Controller
      */
     private function processPhpPage(string $page): array
     {
-        $view = '\\View';
+        $view = '\\Views';
         $split = explode(':', trim($page, '/'));
         if (count($split) > 1) $subpage = $split[1]; else $subpage = null;
         $class = explode('/', trim($split[0], '/'));
@@ -189,7 +189,7 @@ class Controller
      */
     private function renderTWIG(string $page, array $data, bool $debug = false): void
     {
-        $loader = new Twig_Loader_Filesystem('src/views');
+        $loader = new Twig_Loader_Filesystem('src/Views');
         $twig = new Twig_Environment($loader, ['debug' => $debug]);
         if ($debug === true) $twig->addExtension(new \Twig_Extension_Debug());
         $twig->display($page, $data);
