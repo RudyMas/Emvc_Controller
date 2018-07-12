@@ -13,7 +13,7 @@ use Twig_Loader_Filesystem;
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
  * @copyright   2016-2018, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.5.1
+ * @version     1.5.2
  * @package     EasyMVC\Controller
  */
 class Controller
@@ -30,22 +30,24 @@ class Controller
         switch (strtoupper($type)) {
             case 'HTML':
                 $this->renderHTML($page);
-                exit;
+                break;
             case 'JSON':
                 $this->renderJSON($data, $httpResponseCode);
-                exit;
+                break;
             case 'XML':
                 $this->renderXML($data, $httpResponseCode);
-                exit;
+                break;
             case 'PHP':
                 $this->renderPHP($page, $data);
-                exit;
+                break;
             case 'TWIG':
                 $this->renderTWIG($page, $data, false); //TODO: Set debug to true while coding
-                exit;
+                break;
             default:
                 throw new Exception("<p><b>Exception:</b> Wrong page type ({$type}) given.</p>", 501);
         }
+        ob_flush();
+        flush();
     }
 
     /**

@@ -1,9 +1,8 @@
 {
   "name": "easymvc/controller",
   "description": "PHP Class Controller for the EasyMVC Framework",
-  "version": "1.5.1",
   "type": "library",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Rudy Mas",
@@ -15,9 +14,9 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">= 7.1",
-    "rudymas/xml_json": "*",
-    "twig/twig": "*",
-    "rudymas/html5": "*"
+    "rudymas/xml_json": "^0",
+    "twig/twig": "^v2",
+    "rudymas/html5": "^1"
   },
   "autoload": {
     "classmap": [
