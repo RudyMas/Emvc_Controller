@@ -13,7 +13,7 @@ use Twig_Loader_Filesystem;
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
  * @copyright   2016-2018, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.5.2.17
+ * @version     1.5.3.18
  * @package     EasyMVC\Controller
  */
 class Controller
@@ -23,9 +23,13 @@ class Controller
      * @param array $data
      * @param string $type
      * @param int $httpResponseCode
+     * @param bool $debug
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
      * @throws Exception
      */
-    public function render(?string $page, array $data, string $type, int $httpResponseCode = 200): void
+    public function render(?string $page, array $data, string $type, int $httpResponseCode = 200, bool $debug = false): void
     {
         switch (strtoupper($type)) {
             case 'HTML':
@@ -41,7 +45,7 @@ class Controller
                 $this->renderPHP($page, $data);
                 break;
             case 'TWIG':
-                $this->renderTWIG($page, $data, false); //TODO: Set debug to true while coding
+                $this->renderTWIG($page, $data, $debug);
                 break;
             default:
                 throw new Exception("<p><b>Exception:</b> Wrong page type ({$type}) given.</p>", 501);
@@ -199,13 +203,13 @@ class Controller
 
     /**
      * @param mixed $array
+     * @param bool $stop
      */
-    public function checkArray($array): void
+    public function checkArray($array, bool $stop = false): void
     {
         print('<pre>');
         print_r($array);
         print('</pre>');
+        if ($stop) exit;
     }
 }
-
-/** End of File: Controller.php **/
