@@ -13,9 +13,9 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">= 7.1",
+    "php": ">= 7.2",
     "rudymas/xml_json": "^0",
-    "twig/twig": "^v2",
+    "twig/twig": "^v3",
     "rudymas/html5": "^1"
   },
   "autoload": {

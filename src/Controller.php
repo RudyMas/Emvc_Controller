@@ -4,16 +4,20 @@ namespace EasyMVC;
 
 use Exception;
 use RudyMas\XML_JSON\XML_JSON;
-use Twig_Environment;
-use Twig_Loader_Filesystem;
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+use Twig\Extension\DebugExtension;
+use Twig\Loader\FilesystemLoader;
 
 /**
- * Class Controller (PHP version 7.1)
+ * Class Controller (PHP version 7.2)
  *
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
  * @copyright   2016-2020, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.5.3.19
+ * @version     1.5.5.0
  * @package     EasyMVC\Controller
  */
 class Controller
@@ -24,10 +28,9 @@ class Controller
      * @param string $type
      * @param int $httpResponseCode
      * @param bool $debug
-     * @throws \Twig_Error_Loader
-     * @throws \Twig_Error_Runtime
-     * @throws \Twig_Error_Syntax
-     * @throws Exception
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function render(?string $page, array $data, string $type, int $httpResponseCode = 200, bool $debug = false): void
     {
@@ -189,15 +192,15 @@ class Controller
      * @param string $page
      * @param array $data
      * @param bool $debug
-     * @throws \Twig_Error_Loader
-     * @throws \Twig_Error_Runtime
-     * @throws \Twig_Error_Syntax
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     private function renderTWIG(string $page, array $data, bool $debug = false): void
     {
-        $loader = new Twig_Loader_Filesystem('src/Views');
-        $twig = new Twig_Environment($loader, ['debug' => $debug]);
-        if ($debug === true) $twig->addExtension(new \Twig_Extension_Debug());
+        $loader = new FilesystemLoader('src/Views');
+        $twig = new Environment($loader, ['debug' => $debug]);
+        if ($debug === true) $twig->addExtension(new DebugExtension());
         $twig->display($page, $data);
     }
 
