@@ -1,6 +1,6 @@
 <?php
 
-namespace EasyMVC\Controller;
+namespace EasyMVC;
 
 use Exception;
 use RudyMas\XML_JSON\XML_JSON;
