@@ -19,11 +19,8 @@
     "rudymas/html5": "^1"
   },
   "autoload": {
-    "classmap": [
-      "src/"
-    ],
     "psr-4": {
-      "EasyMVC\\Controller\\": "src/"
+      "EasyMVC\\": "src/"
     }
   }
 }

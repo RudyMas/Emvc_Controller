@@ -11,9 +11,9 @@ use Twig_Loader_Filesystem;
  * Class Controller (PHP version 7.1)
  *
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
- * @copyright   2016-2018, rmsoft.be. (http://www.rmsoft.be/)
+ * @copyright   2016-2020, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.5.3.18
+ * @version     1.5.3.19
  * @package     EasyMVC\Controller
  */
 class Controller
