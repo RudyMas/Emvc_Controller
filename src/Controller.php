@@ -3,7 +3,7 @@
 namespace EasyMVC;
 
 use Exception;
-use RudyMas\XML_JSON\XML_JSON;
+use RudyMas\XML_JSON;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -17,7 +17,7 @@ use Twig\Loader\FilesystemLoader;
  * @author      Rudy Mas <rudy.mas@rmsoft.be>
  * @copyright   2016-2020, rmsoft.be. (http://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
- * @version     1.5.5.0
+ * @version     1.5.6.0
  * @package     EasyMVC\Controller
  */
 class Controller
